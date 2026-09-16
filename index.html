@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Shree OlioRise — Cold-Pressed Oils & Pure Desi Cow Ghee. Pure by Nature, Healthy by Choice.">
+<title>Shree OlioRise | Pure by Nature, Healthy by Choice</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --green:#0d4d35; --green2:#176443; --deep:#073b29;
+  --cream:#fff8e9; --paper:#f8eed8; --gold:#c6922c;
+  --ink:#1d261f; --muted:#667268; --white:#fffdf8;
+  --shadow:0 18px 45px rgba(20,54,37,.12);
+  --radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans","Noto Sans Devanagari",sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1160px,92%);margin:auto}
+.topbar{background:var(--deep);color:#fff;padding:9px 0;font-size:13px}
+.topbar .container{display:flex;justify-content:space-between;gap:20px}
+.nav{position:sticky;top:0;z-index:50;background:rgba(255,253,248,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(13,77,53,.1)}
+.nav-inner{height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:12px;font-family:"Cormorant Garamond",serif;font-size:30px;font-weight:700;color:var(--deep)}
+.brand img{width:65px;height:52px;object-fit:cover;object-position:center;border-radius:10px}
+.links{display:flex;align-items:center;gap:25px;font-size:14px;font-weight:600}
+.links a:hover{color:var(--green2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:13px 21px;font-weight:700;cursor:pointer;transition:.25s}
+.btn-primary{background:var(--green);color:#fff}
+.btn-primary:hover{transform:translateY(-2px);background:var(--deep)}
+.btn-light{background:#fff;color:var(--green);box-shadow:0 8px 25px rgba(0,0,0,.08)}
+.mobile{display:none}
+.hero{position:relative;min-height:690px;overflow:hidden;background:var(--deep)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,45,31,.93) 0%,rgba(4,45,31,.72) 39%,rgba(4,45,31,.12) 74%,rgba(4,45,31,.05) 100%);z-index:1}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 47%}
+.hero-content{position:relative;z-index:2;min-height:690px;display:flex;align-items:center;padding:70px 0}
+.hero-copy{max-width:610px;color:#fff}
+.eyebrow{letter-spacing:.18em;text-transform:uppercase;font-size:12px;font-weight:700;color:#f3d37a;margin-bottom:17px}
+h1{font-family:"Cormorant Garamond",serif;font-size:clamp(56px,8vw,96px);line-height:.9;margin-bottom:22px}
+.hero-copy h1 span{color:#f2c75b}
+.hero-copy p{font-size:19px;max-width:540px;color:#f8f2e7;margin-bottom:28px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.trust-strip{background:#f3e7cc;border-bottom:1px solid #e5d7b7}
+.trust-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:19px 0}
+.trust-item{text-align:center;border-right:1px solid #d6c9ab;padding:5px 14px}
+.trust-item:last-child{border:0}
+.trust-item strong{display:block;color:var(--green);font-size:14px}
+.trust-item span{font-size:12px;color:#6f766f}
+.section{padding:95px 0}
+.section-head{text-align:center;max-width:700px;margin:0 auto 48px}
+.kicker{color:var(--green2);font-size:13px;text-transform:uppercase;letter-spacing:.16em;font-weight:800}
+h2{font-family:"Cormorant Garamond",serif;font-size:clamp(40px,5vw,62px);line-height:1;margin:10px 0 16px;color:var(--deep)}
+.section-head p{color:var(--muted)}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.story-img{border-radius:32px;overflow:hidden;box-shadow:var(--shadow);border:8px solid #fff9eb}
+.story-copy h2{font-size:56px}
+.story-copy p{margin:15px 0;color:#5e6961}
+.hindi{font-family:"Noto Sans Devanagari",sans-serif}
+.products{background:#fffdf7}
+.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;border:1px solid #ece4d2;border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 35px rgba(31,67,46,.07);transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card-img{height:310px;background:linear-gradient(180deg,#fff8e7,#f2e7cd);display:flex;align-items:center;justify-content:center;padding:16px}
+.card-img img{height:100%;width:100%;object-fit:contain}
+.card-body{padding:23px}
+.card-body h3{font-family:"Cormorant Garamond",serif;font-size:30px;color:var(--deep)}
+.card-body p{color:var(--muted);font-size:14px;min-height:48px;margin:5px 0 18px}
+.card-footer{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.process{background:var(--paper)}
+.process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{background:rgba(255,253,248,.75);padding:27px 22px;border-radius:20px;border:1px solid #e5d9bf}
+.step-no{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:#fff;font-weight:800;margin-bottom:17px}
+.step h3{font-size:18px;margin-bottom:7px;color:var(--deep)}
+.step p{font-size:14px;color:var(--muted)}
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:60px;align-items:center}
+.feature-list{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:28px}
+.feature{padding:20px;border-radius:18px;background:#fff;border:1px solid #ebe3d1}
+.feature b{color:var(--green);display:block;margin-bottom:4px}
+.feature span{font-size:13px;color:var(--muted)}
+.cert{background:var(--deep);color:#fff}
+.cert h2{color:#fff}
+.cert p{color:#dce8df}
+.cert-card{background:#fffaf0;color:var(--ink);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+.cert-badge{display:inline-flex;padding:7px 11px;border-radius:999px;background:#e7f0e7;color:var(--green);font-weight:800;font-size:12px;margin-bottom:15px}
+.contact{background:#f7edda}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.contact-card{background:#fff;border-radius:26px;padding:32px;box-shadow:0 12px 35px rgba(32,62,44,.07)}
+.contact-row{display:flex;gap:15px;margin:18px 0}
+.contact-icon{width:44px;height:44px;border-radius:50%;background:#eaf2e9;display:grid;place-items:center;color:var(--green);font-weight:900;flex:0 0 auto}
+.contact-row strong{display:block;color:var(--deep)}
+.contact-row span{color:var(--muted);font-size:14px}
+.quote{font-family:"Cormorant Garamond",serif;font-size:38px;line-height:1.1;color:var(--deep)}
+.footer{background:#062f21;color:#e6f0e8;padding:52px 0 25px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:40px}
+.footer h3{font-family:"Cormorant Garamond",serif;font-size:30px;color:#fff}
+.footer p,.footer a{color:#b9cfc2;font-size:14px}
+.footer a{display:block;margin:8px 0}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:35px;padding-top:18px;font-size:12px;color:#9ab3a5;display:flex;justify-content:space-between;gap:20px}
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:80;background:#1aa260;color:#fff;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;font-size:24px;box-shadow:0 12px 30px rgba(0,0,0,.22)}
+@media(max-width:900px){
+ .links{display:none}.mobile{display:block}
+ .nav-inner{height:68px}
+ .hero,.hero-content{min-height:650px}
+ .hero:before{background:linear-gradient(90deg,rgba(4,45,31,.92),rgba(4,45,31,.55))}
+ .trust-grid{grid-template-columns:1fr 1fr}
+ .trust-item:nth-child(2){border:0}
+ .story,.split,.contact-grid{grid-template-columns:1fr}
+ .product-grid{grid-template-columns:1fr 1fr}
+ .process-grid{grid-template-columns:1fr 1fr}
+ .footer-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:600px){
+ .topbar .container{justify-content:center;text-align:center}.topbar .container span:last-child{display:none}
+ .brand{font-size:25px}.brand img{width:54px;height:44px}
+ .hero{min-height:720px}.hero-content{min-height:720px;padding-top:90px}
+ h1{font-size:60px}.hero-copy p{font-size:16px}
+ .product-grid,.process-grid,.feature-list,.footer-grid{grid-template-columns:1fr}
+ .section{padding:70px 0}.story-copy h2{font-size:45px}
+ .card-img{height:280px}
+ .footer-bottom{flex-direction:column}
+}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container"><span>Cold-Pressed Oils &amp; Pure Desi Cow Ghee</span><span>8860584007 &nbsp;|&nbsp; 9810361097</span></div></div>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#home"><img src="assets/logo.jpg" alt="Shree OlioRise logo"><span>Shree OlioRise</span></a>
+    <div class="links">
+      <a href="#about">About</a><a href="#products">Our Range</a><a href="#process">Our Process</a><a href="#quality">Quality</a><a href="#contact">Contact</a>
+      <a class="btn btn-primary" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products.">WhatsApp Us</a>
+    </div>
+    <a class="btn btn-primary mobile" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products.">WhatsApp</a>
+  </div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+  <img class="hero-bg" src="assets/products-hero.jpg" alt="Shree OlioRise cold pressed oils and desi cow ghee">
+  <div class="container hero-content">
+    <div class="hero-copy">
+      <div class="eyebrow">Shree OlioRise • Cold Pressed Oils</div>
+      <h1>Pure by Nature.<br><span>Healthy by Choice.</span></h1>
+      <p>Carefully crafted cold-pressed oils and pure Desi Cow Ghee, made for everyday family kitchens.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#products">Explore Our Range</a>
+        <a class="btn btn-light" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20am%20interested%20in%20your%20products.">Enquire on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="trust-strip">
+  <div class="container trust-grid">
+    <div class="trust-item"><strong>100% Natural</strong><span>Nature-inspired goodness</span></div>
+    <div class="trust-item"><strong>Cold Pressed</strong><span>Carefully crafted oils</span></div>
+    <div class="trust-item"><strong>Rich Nutrition</strong><span>Made for everyday cooking</span></div>
+    <div class="trust-item"><strong>Family Focused</strong><span>Purity you can value</span></div>
+  </div>
+</section>
+
+<section class="section" id="about">
+ <div class="container story">
+   <div class="story-img"><img src="assets/products-hero.jpg" alt="Shree OlioRise product range"></div>
+   <div class="story-copy">
+     <div class="kicker">Our Story</div>
+     <h2>Nature's purity, crafted for your family.</h2>
+     <p>At Shree OlioRise, our focus is simple: bring carefully crafted oils and ghee to your kitchen while keeping the brand rooted in natural ingredients, familiar flavours and family values.</p>
+     <p class="hindi">“शुद्धता का स्वाद… हर घर के साथ।”</p>
+     <p>Our brand range includes cold-pressed oils and Desi Cow Ghee (Bilona), presented with a commitment to thoughtful processing and a traditional food experience.</p>
+   </div>
+ </div>
+</section>
+
+<section class="section products" id="products">
+ <div class="container">
+  <div class="section-head">
+    <div class="kicker">Our Pure Range</div>
+    <h2>Everyday goodness, beautifully crafted.</h2>
+    <p>Explore the Shree OlioRise range. For product sizes, availability and purchase enquiries, connect with us directly on WhatsApp.</p>
+  </div>
+  <div class="product-grid">
+    <article class="card"><div class="card-img"><img src="assets/mustard-oil.jpg" alt="Shree OlioRise Mustard Oil"></div><div class="card-body"><h3>Mustard Oil</h3><p>Cold-pressed mustard oil with a familiar, robust flavour.</p><div class="card-footer"><span>Cold Pressed</span><a class="btn btn-primary" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20am%20interested%20in%20Mustard%20Oil.">Enquire</a></div></div></article>
+    <article class="card"><div class="card-img"><img src="assets/groundnut-oil.jpg" alt="Shree OlioRise Groundnut Oil"></div><div class="card-body"><h3>Groundnut Oil</h3><p>A naturally rich groundnut oil made for everyday cooking.</p><div class="card-footer"><span>Cold Pressed</span><a class="btn btn-primary" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20am%20interested%20in%20Groundnut%20Oil.">Enquire</a></div></div></article>
+    <article class="card"><div class="card-img"><img src="assets/sesame-oil.jpg" alt="Shree OlioRise Sesame Oil"></div><div class="card-body"><h3>Sesame Oil</h3><p>Cold-pressed sesame oil with its distinctive traditional character.</p><div class="card-footer"><span>Cold Pressed</span><a class="btn btn-primary" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20am%20interested%20in%20Sesame%20Oil.">Enquire</a></div></div></article>
+    <article class="card"><div class="card-img"><img src="assets/almond-oil.jpg" alt="Shree OlioRise Almond Oil"></div><div class="card-body"><h3>Almond Oil</h3><p>Carefully crafted almond oil from the Shree OlioRise range.</p><div class="card-footer"><span>Cold Pressed</span><a class="btn btn-primary" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20am%20interested%20in%20Almond%20Oil.">Enquire</a></div></div></article>
+    <article class="card"><div class="card-img"><img src="assets/coconut-oil.jpg" alt="Shree OlioRise Coconut Oil"></div><div class="card-body"><h3>Coconut Oil</h3><p>Cold-pressed coconut oil with a clean, familiar coconut character.</p><div class="card-footer"><span>Cold Pressed</span><a class="btn btn-primary" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20am%20interested%20in%20Coconut%20Oil.">Enquire</a></div></div></article>
+    <article class="card"><div class="card-img"><img src="assets/desi-cow-ghee.jpg" alt="Shree OlioRise Desi Cow Ghee"></div><div class="card-body"><h3>Desi Cow Ghee</h3><p>Desi Cow Ghee (Bilona) presented as part of the Shree OlioRise range.</p><div class="card-footer"><span>Bilona</span><a class="btn btn-primary" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20am%20interested%20in%20Desi%20Cow%20Ghee.">Enquire</a></div></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="section process" id="process">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">Our Process</div>
+   <h2>Carefully handled. Naturally inspired.</h2>
+   <p>Our shared brand material describes a slow settling and filtration approach after the oil is prepared, with an emphasis on avoiding unnecessary processing.</p>
+  </div>
+  <div class="process-grid">
+   <div class="step"><div class="step-no">01</div><h3>Prepare</h3><p>Oil is prepared with attention to the raw material and the desired traditional character.</p></div>
+   <div class="step"><div class="step-no">02</div><h3>Cold Press</h3><p>The range is presented as cold-pressed oils, aligned with the brand's core identity.</p></div>
+   <div class="step"><div class="step-no">03</div><h3>Natural Settling</h3><p>The supplied brand copy describes keeping prepared oil still for 24–48 hours so fine natural particles can settle.</p></div>
+   <div class="step"><div class="step-no">04</div><h3>Careful Filtration</h3><p>After settling, the oil is carefully separated/filtered, aiming to retain its natural character.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="section" id="quality">
+ <div class="container split">
+  <div>
+   <div class="kicker">Why Shree OlioRise</div>
+   <h2>Purity you can see. Care you can feel.</h2>
+   <p>Our visual identity and supplied marketing material centre on natural ingredients, cold-pressed oils and a family-first food experience.</p>
+   <div class="feature-list">
+    <div class="feature"><b>Cold Pressed</b><span>Core identity across the oil range.</span></div>
+    <div class="feature"><b>Carefully Crafted</b><span>Thoughtful handling and presentation.</span></div>
+    <div class="feature"><b>Natural Focus</b><span>Brand language rooted in nature.</span></div>
+    <div class="feature"><b>Family First</b><span>Created for everyday home kitchens.</span></div>
+   </div>
+  </div>
+  <div class="cert-card">
+   <span class="cert-badge">FSSAI REGISTRATION</span>
+   <h3 style="font-family:'Cormorant Garamond',serif;font-size:38px;color:#073b29">Food Safety Registration</h3>
+   <p style="margin:10px 0 20px;color:#667268">Registration No. <strong>22726441001493</strong></p>
+   <p style="font-size:14px;color:#667268">The supplied certificate identifies the food business as a vegetable oil and processing unit and lists Coconut, Groundnut, Mustard/Rapeseed, Sesame and Almond Oil in its product annexure.</p>
+   <p style="font-size:13px;color:#667268;margin:15px 0">Certificate issued: 03-08-2026 &nbsp;•&nbsp; Fee paid up to: 02-08-2031</p>
+   <a class="btn btn-primary" href="assets/fssai-certificate.pdf" target="_blank">View Certificate</a>
+  </div>
+ </div>
+</section>
+
+<section class="section cert">
+ <div class="container split">
+  <div>
+   <div class="kicker" style="color:#f3d37a">A Taste of Home</div>
+   <h2>त्योहार सिर्फ मिठाइयों से नहीं…</h2>
+   <p class="hindi" style="font-size:18px;margin-top:12px">अपनों के साथ और अपनेपन के स्वाद से खास बनते हैं।</p>
+  </div>
+  <div>
+   <p style="font-size:18px">When food brings people together, purity and familiarity become part of the memory. Shree OlioRise brings that thought to its cold-pressed oils and Desi Cow Ghee range.</p>
+   <p class="quote" style="color:#f3d37a;margin-top:25px">“हर बूंद में प्रकृति का भरोसा।”</p>
+ </div>
+ </div>
+</section>
+
+<section class="section contact" id="contact">
+ <div class="container">
+  <div class="section-head">
+   <div class="kicker">Get In Touch</div>
+   <h2>Bring purity to your kitchen.</h2>
+   <p>For product availability, sizes and enquiries, reach Shree OlioRise directly.</p>
+  </div>
+  <div class="contact-grid">
+   <div class="contact-card">
+    <div class="contact-row"><div class="contact-icon">☎</div><div><strong>Call Us</strong><span>8860584007 &nbsp;|&nbsp; 9810361097</span></div></div>
+    <div class="contact-row"><div class="contact-icon">✉</div><div><strong>Email</strong><span>shreeoliorise@gmail.com</span></div></div>
+    <div class="contact-row"><div class="contact-icon">⌖</div><div><strong>Address</strong><span>F-35/B, 1st Floor, Sector-27, Noida, Uttar Pradesh, India</span></div></div>
+   </div>
+   <div class="contact-card" style="display:flex;flex-direction:column;justify-content:center">
+    <div class="quote">“One try is all it takes to experience the difference.”</div>
+    <p style="margin:18px 0;color:#667268">Ask us about our products, available sizes and purchase details.</p>
+    <a class="btn btn-primary" style="align-self:flex-start" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20would%20like%20to%20enquire%20about%20your%20products.">Chat on WhatsApp</a>
+   </div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="footer">
+ <div class="container">
+  <div class="footer-grid">
+   <div><h3>Shree OlioRise</h3><p style="margin:10px 0 16px">Pure by Nature, Healthy by Choice.</p><p>Cold-Pressed Oils &amp; Pure Desi Cow Ghee.</p></div>
+   <div><h3>Explore</h3><a href="#about">Our Story</a><a href="#products">Our Range</a><a href="#process">Our Process</a><a href="#quality">Quality</a></div>
+   <div><h3>Connect</h3><a href="tel:+918860584007">8860584007</a><a href="tel:+919810361097">9810361097</a><a href="mailto:shreeoliorise@gmail.com">shreeoliorise@gmail.com</a><a href="#contact">Noida, Uttar Pradesh</a></div>
+  </div>
+  <div class="footer-bottom"><span>© 2026 Shree OlioRise. All rights reserved.</span><span>Pure • Natural • Carefully Crafted</span></div>
+ </div>
+</footer>
+
+<a class="whatsapp" aria-label="Chat on WhatsApp" href="https://wa.me/918860584007?text=Hello%20Shree%20OlioRise%2C%20I%20would%20like%20to%20know%20more%20about%20your%20products.">✆</a>
+</body>
+</html>
